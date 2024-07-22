@@ -1,4 +1,7 @@
 #!/usr/bin/make -f
 
+# Include resource needed for testing
+export DH_GOLANG_INSTALL_EXTRA := testoutput1
+
 %:
-	dh $@
+	dh $@ --builddirectory=_build --buildsystem=golang

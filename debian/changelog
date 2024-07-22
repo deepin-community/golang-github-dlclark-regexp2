@@ -1,5 +1,77 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-dlclark-regexp2 (1.11.0+ds1-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version 1.11.0
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Anthony Fok <foka@debian.org>  Sun, 24 Mar 2024 20:17:57 -0600
+
+golang-github-dlclark-regexp2 (1.10.0+ds1-1) unstable; urgency=medium
+
+  * New upstream version 1.10.0
+  * Reorder fields in debian/control and debian/copyright
+  * Use dh-sequence-golang instead of dh-golang and --with=golang
+  * Invoke dh with --builddirectory=_build
+  * Drop -dev package’s unneeded dependency on ${shlibs:Depends}
+  * Bump Standards-Version to 4.6.2 (no change)
+  * Patch fastclock_test.go to increase timeout to 10 ms
+    to prevent TestDeadline and TestStopTimeoutClock from failing on
+    busy or slower machines
+
+ -- Anthony Fok <foka@debian.org>  Wed, 11 Oct 2023 14:55:30 -0600
+
+golang-github-dlclark-regexp2 (1.4.0+ds1-1) unstable; urgency=medium
+
+  [ Debian Janitor (Jelmer Vernooĳ) ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+  * golang-github-dlclark-regexp2-dev: Add Multi-Arch: foreign.
+
+  [ Anthony Fok ]
+  * New upstream version 1.4.0
+  * debian/watch: Add +ds1 suffix for repacking
+  * Change Section from devel to golang
+  * Bump debhelper dependency to "Build-Depends: debhelper-compat (= 13)"
+  * Bump Standards-Version to 4.6.0 (no change)
+  * Add "Rules-Requires-Root: no" to debian/control
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * debian/copyright: Fix Lintian duplicate-globbing-patterns errors
+    where syntax/escape.go and regexp.go were listed twice
+
+ -- Anthony Fok <foka@debian.org>  Sun, 19 Sep 2021 02:51:12 -0600
+
+golang-github-dlclark-regexp2 (1.2.0-1) unstable; urgency=medium
+
+  * New upstream version 1.2.0
+  * Fix errors in debian/watch
+  * Bump debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+  * Bump Standards-Version to 4.4.1 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Sun, 27 Oct 2019 07:22:15 -0600
+
+golang-github-dlclark-regexp2 (1.1.6-2) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * Apply "cme fix dpkg" fixes: Set Priority to optional,
+    bump Standards-Version to 4.3.0, update debhelper to (>= 12~),
+    use secure https copyright file specification URI, etc.
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Mon, 31 Dec 2018 02:56:58 -0700
+
+golang-github-dlclark-regexp2 (1.1.6-1) unstable; urgency=medium
+
+  * New upstream version 1.1.6
+  * Add "Testsuite: autopkgtest-pkg-go" to d/control
+  * Bump Standards-Version to 4.0.0
+
+ -- Diego M. Rodriguez <diego.plan9@gmail.com>  Wed, 16 Aug 2017 15:20:55 +0200
+
+golang-github-dlclark-regexp2 (1.1.4+git20170331.0.902a5ce-1) unstable; urgency=medium
+
+  * Initial release (Closes: #858358)
+
+ -- Diego M. Rodriguez <diego.plan9@gmail.com>  Mon, 03 Apr 2017 14:37:01 +0200
